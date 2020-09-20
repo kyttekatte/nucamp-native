@@ -159,15 +159,15 @@ class CampsiteInfo extends Component {
                             placeholder='Author'
                             leftIcon={{type: 'font-awesome', name: 'user-o'}}
                             leftIconContainerStyle={{paddingRight: 10}}
-                            onChangeText={author => this.onChangeText(author)}
+                            onChangeText={author => this.setState({author: author})}
                             value={this.state.author}
                         />
                         <Input 
                             placeholder='Comment'
                             leftIcon={{type: 'font-awesome', name: 'comment-o'}}
                             leftIconContainerStyle={{paddingRight: 10}}
-                            onChangeText={comment => this.onChangeText(comment)}
-                            value={this.state.comment}
+                            onChangeText={text => this.setState({text: text})}
+                            value={this.state.text}
                         />
                         <View style={{margin: 10}}>
                             <Button
