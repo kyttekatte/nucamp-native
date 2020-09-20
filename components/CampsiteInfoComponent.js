@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, FlatList, Modal, Button, StyleSheet } from 'react-native';
+import { Text, View, ScrollView, FlatList, Modal, Button, StyleSheet, TextInput } from 'react-native';
 import { Card, Icon, Rating, Input } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
@@ -159,15 +159,15 @@ class CampsiteInfo extends Component {
                             placeholder='Author'
                             leftIcon={{type: 'font-awesome', name: 'user-o'}}
                             leftIconContainerStyle={{paddingRight: 10}}
-                            //onChangeText={author => onChangeText(author)}
-                            //value={author}
+                            onChangeText={author => this.onChangeText(author)}
+                            value={this.state.author}
                         />
                         <Input 
                             placeholder='Comment'
                             leftIcon={{type: 'font-awesome', name: 'comment-o'}}
                             leftIconContainerStyle={{paddingRight: 10}}
-                            //onChangeText={comment => onChangeText(comment)}
-                            //value={author}
+                            onChangeText={comment => this.onChangeText(comment)}
+                            value={this.state.comment}
                         />
                         <View style={{margin: 10}}>
                             <Button
