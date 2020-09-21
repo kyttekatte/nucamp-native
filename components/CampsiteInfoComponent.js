@@ -116,7 +116,6 @@ class CampsiteInfo extends Component {
             this.state.author,
             this.state.text
         );
-        console.log(JSON.stringify(this.state));
         this.toggleModal();
     }
 
